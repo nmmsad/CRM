@@ -1,11 +1,11 @@
+﻿using CRM.Models;
 using Microsoft.EntityFrameworkCore;
-using CRM.Models;
 
-namespace CRM.Data
-{
-    public class CRMContext : DbContext
+namespace CRM.Data;
+
+    public class CrmContext : DbContext
     {
-        public CRMContext(DbContextOptions<CRMContext> options)
+        public CrmContext(DbContextOptions<CrmContext> options)
             : base(options)
         {
         }
@@ -20,4 +20,4 @@ namespace CRM.Data
         public DbSet<CRM.Models.StaffJob> StaffJob { get; set; }
 
     }
-}
+

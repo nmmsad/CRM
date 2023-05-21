@@ -12,9 +12,9 @@ namespace CRM.Controllers
 {
     public class UserTgsController : Controller
     {
-        private readonly CRMContext _context;
+        private readonly CrmContext _context;
 
-        public UserTgsController(CRMContext context)
+        public UserTgsController(CrmContext context)
         {
             _context = context;
         }

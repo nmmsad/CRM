@@ -12,9 +12,9 @@ namespace CRM.Controllers
 {
     public class ExpensesController : Controller
     {
-        private readonly CRMContext _context;
+        private readonly CrmContext _context;
 
-        public ExpensesController(CRMContext context)
+        public ExpensesController(CrmContext context)
         {
             _context = context;
         }

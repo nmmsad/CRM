@@ -34,7 +34,7 @@ namespace CRM
                 options.HtmlIndicatorUp = " <span>&uarr;</span>";
             });
 
-            services.AddDbContext<CRMContext>(options =>
+            services.AddDbContext<CrmContext>(options =>
             options.UseNpgsql(Configuration.GetConnectionString("CRMContext")));
 
             services.AddDistributedMemoryCache();

@@ -12,9 +12,9 @@ namespace CRM.Controllers
 {
     public class LocationsController : Controller
     {
-        private readonly CRMContext _context;
+        private readonly CrmContext _context;
 
-        public LocationsController(CRMContext context)
+        public LocationsController(CrmContext context)
         {
             _context = context;
         }
