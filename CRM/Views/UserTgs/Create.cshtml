@@ -1,0 +1,48 @@
+﻿@model CRM.Models.UserTg
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>UserTg</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TgId" class="control-label"></label>
+                <input asp-for="TgId" class="form-control" />
+                <span asp-validation-for="TgId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TgUsername" class="control-label"></label>
+                <input asp-for="TgUsername" class="form-control" />
+                <span asp-validation-for="TgUsername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestTime" class="control-label"></label>
+                <input asp-for="RequestTime" class="form-control" />
+                <span asp-validation-for="RequestTime" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsRequest" /> @Html.DisplayNameFor(model => model.IsRequest)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
