@@ -15,10 +15,10 @@ namespace CRM.Controllers
         const string SessionName = "_Name";
         const string SessionAge = "_Age";
 
-        private readonly CRMContext _context;
+        private readonly CrmContext _context;
 
         
-        public HomeController(CRMContext context)
+        public HomeController(CrmContext context)
         {
             _context = context;
         }

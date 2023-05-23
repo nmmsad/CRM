@@ -12,9 +12,9 @@ namespace CRM.Controllers
 {
     public class StaffsController : Controller
     {
-        private readonly CRMContext _context;
+        private readonly CrmContext _context;
 
-        public StaffsController(CRMContext context)
+        public StaffsController(CrmContext context)
         {
             _context = context;
         }

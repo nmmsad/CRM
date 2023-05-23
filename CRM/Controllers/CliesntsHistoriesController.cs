@@ -12,9 +12,9 @@ namespace CRM.Controllers
 {
     public class CliesntsHistoriesController : Controller
     {
-        private readonly CRMContext _context;
+        private readonly CrmContext _context;
 
-        public CliesntsHistoriesController(CRMContext context)
+        public CliesntsHistoriesController(CrmContext context)
         {
             _context = context;
         }
