@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace CRM.Migrations
 {
-    [DbContext(typeof(CRMContext))]
+    [DbContext(typeof(CrmContext))]
     [Migration("20230523154114_AddClient")]
     partial class AddClient
     {

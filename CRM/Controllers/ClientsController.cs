@@ -13,9 +13,9 @@ namespace CRM.Controllers
 {
     public class ClientsController : Controller
     {
-        private readonly CRMContext _context;
+        private readonly CrmContext _context;
 
-        public ClientsController(CRMContext context)
+        public ClientsController(CrmContext context)
         {
             _context = context;
         }
