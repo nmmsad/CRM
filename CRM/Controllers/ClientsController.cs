@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CRM.Data;
 using CRM.Models;
-using ReflectionIT.Mvc.Paging;
 
 namespace CRM.Controllers
 {
@@ -55,7 +54,7 @@ namespace CRM.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,CarDescription,Price,PhoneNumber,IdStaff")] Client client)
+        public async Task<IActionResult> Create([Bind("Id,UserName,TgContact,WhatsAppContact,CarName")] Client client)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +86,7 @@ namespace CRM.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,CarDescription,Price,PhoneNumber,IdStaff")] Client client)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,UserName,TgContact,WhatsAppContact,CarName")] Client client)
         {
             if (id != client.Id)
             {
@@ -142,7 +141,7 @@ namespace CRM.Controllers
         {
             if (_context.Client == null)
             {
-                return Problem("Entity set 'CRMContext.Client'  is null.");
+                return Problem("Entity set 'CrmContext.Client'  is null.");
             }
             var client = await _context.Client.FindAsync(id);
             if (client != null)

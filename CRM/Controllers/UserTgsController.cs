@@ -54,7 +54,7 @@ namespace CRM.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,TgId,TgUsername,RequestTime,IsRequest")] UserTg userTg)
+        public async Task<IActionResult> Create([Bind("Id,UserId,UserName,RequestTime,IsRequest")] UserTg userTg)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace CRM.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,TgId,TgUsername,RequestTime,IsRequest")] UserTg userTg)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,UserId,UserName,RequestTime,IsRequest")] UserTg userTg)
         {
             if (id != userTg.Id)
             {
@@ -141,7 +141,7 @@ namespace CRM.Controllers
         {
             if (_context.UserTg == null)
             {
-                return Problem("Entity set 'CRMContext.UserTg'  is null.");
+                return Problem("Entity set 'CrmContext.UserTg'  is null.");
             }
             var userTg = await _context.UserTg.FindAsync(id);
             if (userTg != null)

@@ -46,7 +46,7 @@ namespace CRM.Controllers
             {
                 return NotFound();
             }
-            ViewBag.Message = role.Name + "s";
+            ViewBag.Message = role.RoleName + "s";
             return View(user);
         }
 

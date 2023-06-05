@@ -13,7 +13,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Fio)
+                @Html.DisplayNameFor(model => model.ClientName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Adress)
@@ -31,6 +31,9 @@
                 @Html.DisplayNameFor(model => model.PhoneNumber)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.TimeJob)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.IdStaff)
             </th>
             <th></th>
@@ -40,7 +43,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Fio)
+                @Html.DisplayFor(modelItem => item.ClientName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Adress)
@@ -56,6 +59,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeJob)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IdStaff)

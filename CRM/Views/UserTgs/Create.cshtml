@@ -13,24 +13,24 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="TgId" class="control-label"></label>
-                <input asp-for="TgId" class="form-control" />
-                <span asp-validation-for="TgId" class="text-danger"></span>
+                <label asp-for="UserId" class="control-label"></label>
+                <input asp-for="UserId" class="form-control" />
+                <span asp-validation-for="UserId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TgUsername" class="control-label"></label>
-                <input asp-for="TgUsername" class="form-control" />
-                <span asp-validation-for="TgUsername" class="text-danger"></span>
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="RequestTime" class="control-label"></label>
                 <input asp-for="RequestTime" class="form-control" />
                 <span asp-validation-for="RequestTime" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="IsRequest" /> @Html.DisplayNameFor(model => model.IsRequest)
-                </label>
+            <div class="form-group">
+                <label asp-for="IsRequest" class="control-label"></label>
+                <input asp-for="IsRequest" class="form-control" />
+                <span asp-validation-for="IsRequest" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

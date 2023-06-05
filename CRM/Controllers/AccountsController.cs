@@ -75,7 +75,7 @@ namespace CRM.Controllers
         {
             var user = await _context.User.FirstOrDefaultAsync(m => m.Login == userName);
             var role = await _context.Role.FindAsync(Convert.ToInt32(user.RoleId));
-            return role.Name;
+            return role.RoleName;
             //if(user.RoleId == "1")
             //{
             //    return "Admin";

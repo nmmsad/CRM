@@ -54,7 +54,7 @@ namespace CRM.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Fio,Adress,CarName,Price,TgId,PhoneNumber,IdStaff")] CliesntsHistory cliesntsHistory)
+        public async Task<IActionResult> Create([Bind("Id,ClientName,Adress,CarName,Price,TgId,PhoneNumber,TimeJob,IdStaff")] CliesntsHistory cliesntsHistory)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace CRM.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Fio,Adress,CarName,Price,TgId,PhoneNumber,IdStaff")] CliesntsHistory cliesntsHistory)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ClientName,Adress,CarName,Price,TgId,PhoneNumber,TimeJob,IdStaff")] CliesntsHistory cliesntsHistory)
         {
             if (id != cliesntsHistory.Id)
             {
@@ -141,7 +141,7 @@ namespace CRM.Controllers
         {
             if (_context.CliesntsHistory == null)
             {
-                return Problem("Entity set 'CRMContext.CliesntsHistory'  is null.");
+                return Problem("Entity set 'CrmContext.CliesntsHistory'  is null.");
             }
             var cliesntsHistory = await _context.CliesntsHistory.FindAsync(id);
             if (cliesntsHistory != null)

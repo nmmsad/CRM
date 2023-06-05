@@ -10,8 +10,8 @@ namespace CRM.Models
         public int Id { get; set; }
 
         [StringLength(60, MinimumLength = 2)]
-        [Required(ErrorMessage = "Please Enter Fio")]
-        public string? Fio { get; set; }
+        [Required(ErrorMessage = "Please Enter UserName ")]
+        public string? UserName { get; set; }
 
         [DataType(DataType.Date)]
         //[Range(typeof(DateTime), "1900-01-01", "2010-01-01" ,

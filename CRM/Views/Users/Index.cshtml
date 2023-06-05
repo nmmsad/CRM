@@ -21,7 +21,7 @@
         <thead>
             <tr>
                 <th width="15%">
-                    @Html.SortableHeaderFor(model => model.Fio)
+                @Html.SortableHeaderFor(model => model.UserName)
                 </th>
                 <th width="15%">
                     @Html.SortableHeaderFor(model => model.DateOfBirth)
@@ -60,7 +60,7 @@
             {
 <tr>
     <td>
-        @Html.DisplayFor(modelItem => item.Fio)
+                    @Html.DisplayFor(modelItem => item.UserName)
     </td>
     <td>
         @Convert.ToDateTime(item.DateOfBirth).ToString("dd.MM.yyyy")
