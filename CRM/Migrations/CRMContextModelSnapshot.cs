@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CRM.Migrations
 {
     [DbContext(typeof(CrmContext))]
-    partial class CRMContextModelSnapshot : ModelSnapshot
+    partial class CrmContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -247,8 +247,8 @@ namespace CRM.Migrations
                     b.Property<DateTime?>("RequestTime")
                         .HasColumnType("timestamp without time zone");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("integer");
+                    b.Property<string>("UserId")
+                        .HasColumnType("text");
 
                     b.Property<string>("UserName")
                         .HasColumnType("text");

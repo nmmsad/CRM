@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CRM.Migrations
 {
     [DbContext(typeof(CrmContext))]
-    [Migration("20230523154114_AddClient")]
-    partial class AddClient
+    [Migration("20230608143437_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,20 +33,17 @@ namespace CRM.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("CarDescription")
+                    b.Property<string>("CarName")
                         .HasColumnType("text");
 
-                    b.Property<int?>("IdStaff")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Name")
+                    b.Property<string>("TgContact")
                         .HasColumnType("text");
 
-                    b.Property<int?>("PhoneNumber")
-                        .HasColumnType("integer");
+                    b.Property<string>("UserName")
+                        .HasColumnType("text");
 
-                    b.Property<int?>("Price")
-                        .HasColumnType("integer");
+                    b.Property<string>("WhatsAppContact")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
@@ -67,7 +64,7 @@ namespace CRM.Migrations
                     b.Property<string>("CarName")
                         .HasColumnType("text");
 
-                    b.Property<string>("Fio")
+                    b.Property<string>("ClientName")
                         .HasColumnType("text");
 
                     b.Property<int?>("IdStaff")
@@ -81,6 +78,9 @@ namespace CRM.Migrations
 
                     b.Property<int?>("TgId")
                         .HasColumnType("integer");
+
+                    b.Property<string>("TimeJob")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
@@ -148,7 +148,7 @@ namespace CRM.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Name")
+                    b.Property<string>("RoleName")
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -199,11 +199,6 @@ namespace CRM.Migrations
                         .IsRequired()
                         .HasColumnType("timestamp without time zone");
 
-                    b.Property<string>("Fio")
-                        .IsRequired()
-                        .HasMaxLength(60)
-                        .HasColumnType("character varying(60)");
-
                     b.Property<int?>("LocationId")
                         .HasColumnType("integer");
 
@@ -231,6 +226,11 @@ namespace CRM.Migrations
                     b.Property<string>("UserAddress")
                         .HasColumnType("text");
 
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasMaxLength(60)
+                        .HasColumnType("character varying(60)");
+
                     b.HasKey("Id");
 
                     b.ToTable("User");
@@ -244,17 +244,17 @@ namespace CRM.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<bool>("IsRequest")
+                    b.Property<bool?>("IsRequest")
                         .HasColumnType("boolean");
 
-                    b.Property<DateTime>("RequestTime")
+                    b.Property<DateTime?>("RequestTime")
                         .HasColumnType("timestamp without time zone");
 
-                    b.Property<string>("TgId")
+                    b.Property<string>("UserId")
                         .HasColumnType("text");
 
-                    b.Property<int?>("TgUsername")
-                        .HasColumnType("integer");
+                    b.Property<string>("UserName")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
